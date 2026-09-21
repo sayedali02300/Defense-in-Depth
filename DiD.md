@@ -17,11 +17,12 @@
 - `Maximum path 4`: means OSPF can reach 4 different paths to a destination with same cost. it is called [ECMP]
 
 - `Routing for Networks`: means these are the networks that are currently in OSPF
-## whats an area?
 
 - `Passive Interface`: Ethernet0/3 is inside OSPF but OSPF can't send Hello packets from E0/3.. why? because E0/3 going to PC or a LAN that has no other Router.
 
 - `Routing Information Soureces`: Basically saying these are the sources that OSPF learnt from.. Gateway is the Router IDs of other Routers that R1 took OSPF info from.
+
+## whats an area?
 
 Area is like a space in a big network. Many routers can be in a single area. However, the most important Area is [Area 0]. Most areas usually communicate with Area 0.
 
