@@ -1,31 +1,30 @@
-\## How to check Ip address?
+## How to check Ip address?
 
+- on routers: `show ip interface br`
 
+- on VPCs: `show ip`
 
-\- on routers: `show ip interface br`
+## To show Protocols and the active Routing on a router?
 
-\- on VPCs: `show ip`
+- `Routing Protocol is "ospf 1"`: the protocol is OSPF and the process ID is 1
 
+- `Router ID 192.168.1.1`: Router ID identifies the router inside the OSPF, like a unique name for the router.
 
+- `Number of areas is 1`: R1 is in one area only [we still don't know which area].
 
-\## To show Protocols and the active Routing on a router?
+- `Maximum path 4`: means OSPF can reach 4 different paths to a destination with same cost. it is called [ECMP]
 
+## whats an area?
 
+Area is like a space in a big network. Many routers can be in a single area. However, the most important Area is [Area 0]. Most areas usually communicate with Area 0.
 
-\- `Routing Protocol is "ospf 1"`: the protocol is OSPF and the process ID is 1
+When you see:
 
+- `10.1.1.0 0.0.0.3 area 0`
 
+- `192.168.1.0 0.0.0.255 area 0`
 
-\- `Router ID 192.168.1.1`: Router ID identifies the router inside the OSPF, like a unique name for the router.
-
-
-
-\- `Number of areas is 1`: R1 is in one area only \[we still don't know which area].
-
-
-
-\- `Maximum path 4`: means OSPF can reach 4 different paths to a destination with same cost. it is called \[ECMP]
-
+This means `10.1.1.0/30` AND `192.168.1.0/24` are part of area 0.
 
 
 \## whats an area?
